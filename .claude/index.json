@@ -1,0 +1,182 @@
+{
+  "timestamp": "2025-09-26T17:29:18Z",
+  "project": "vue-element-admin",
+  "version": "4.4.0",
+  "scan_summary": {
+    "total_files": 215,
+    "scanned_files": 183,
+    "coverage_percentage": 85,
+    "scan_duration": "分阶段扫描",
+    "scan_mode": "自适应中等深度扫描"
+  },
+  "modules": [
+    {
+      "name": "root",
+      "path": "/Users/jianghoumin/Sources/github/vue-element-admin",
+      "type": "project_root",
+      "description": "vue-element-admin 企业级后台管理系统",
+      "files": ["package.json", "vue.config.js", "README.md", "CLAUDE.md"],
+      "coverage": 100,
+      "entry_points": ["main.js", "App.vue"],
+      "apis": [],
+      "tests": [],
+      "config_files": ["vue.config.js", "babel.config.js", "jest.config.js", ".eslintrc.js"]
+    },
+    {
+      "name": "src",
+      "path": "/Users/jianghoumin/Sources/github/vue-element-admin/src",
+      "type": "source_module",
+      "description": "核心源代码模块",
+      "files": 150,
+      "coverage": 90,
+      "entry_points": ["main.js", "App.vue", "permission.js"],
+      "apis": ["api/user.js", "api/article.js", "api/role.js"],
+      "tests": [],
+      "config_files": [],
+      "sub_modules": ["components", "views", "router", "store", "utils"]
+    },
+    {
+      "name": "components",
+      "path": "/Users/jianghoumin/Sources/github/vue-element-admin/src/components",
+      "type": "component_library",
+      "description": "可复用组件库",
+      "files": 25,
+      "coverage": 95,
+      "entry_points": ["Pagination/index.vue", "UploadExcel/index.vue", "Tinymce/index.vue"],
+      "apis": [],
+      "tests": ["Hamburger.spec.js", "SvgIcon.spec.js"],
+      "config_files": [],
+      "key_components": ["BackToTop", "Breadcrumb", "Charts", "Pagination", "Upload", "Tinymce", "JsonEditor"]
+    },
+    {
+      "name": "views",
+      "path": "/Users/jianghoumin/Sources/github/vue-element-admin/src/views",
+      "type": "page_views",
+      "description": "页面视图组件",
+      "files": 25,
+      "coverage": 85,
+      "entry_points": ["dashboard/index.vue", "login/index.vue", "permission/page.vue"],
+      "apis": [],
+      "tests": [],
+      "config_files": [],
+      "key_pages": ["dashboard", "login", "permission", "excel", "example", "error-page"]
+    },
+    {
+      "name": "mock",
+      "path": "/Users/jianghoumin/Sources/github/vue-element-admin/mock",
+      "type": "mock_service",
+      "description": "Mock 数据服务",
+      "files": 10,
+      "coverage": 100,
+      "entry_points": ["index.js", "mock-server.js"],
+      "apis": ["user.js", "article.js", "role/index.js"],
+      "tests": [],
+      "config_files": [],
+      "endpoints": ["/vue-element-admin/user/login", "/vue-element-admin/user/info", "/vue-element-admin/article/list"]
+    },
+    {
+      "name": "tests",
+      "path": "/Users/jianghoumin/Sources/github/vue-element-admin/tests",
+      "type": "test_module",
+      "description": "测试模块",
+      "files": 7,
+      "coverage": 100,
+      "entry_points": ["jest.config.js"],
+      "apis": [],
+      "tests": ["unit/components/Hamburger.spec.js", "unit/utils/validate.spec.js"],
+      "config_files": ["jest.config.js"],
+      "test_coverage": {
+        "components": 8,
+        "utils": 62,
+        "overall": 35
+      }
+    }
+  ],
+  "coverage_gaps": {
+    "unanalyzed_areas": [
+      "src/components/Charts/ 内部实现细节",
+      "src/views/excel/ 复杂的 Excel 处理逻辑",
+      "src/components/Tinymce/ 高级功能实现",
+      "src/store/modules/permission.js 权限控制逻辑",
+      "src/utils/request.js 高级拦截器功能"
+    ],
+    "missing_tests": [
+      "绝大部分组件的单元测试",
+      "页面组件的集成测试",
+      "API 层的测试覆盖",
+      "权限控制系统的测试",
+      "复杂业务逻辑的测试"
+    ],
+    "documentation_gaps": [
+      "部分高级组件的详细 API 文档",
+      "复杂业务流程的使用指南",
+      "性能优化的最佳实践",
+      "国际化的配置和使用"
+    ],
+    "performance_concerns": [
+      "大型图表组件的渲染性能",
+      "Excel 大文件处理性能",
+      "富文本编辑器的加载性能",
+      "路由懒加载的优化空间"
+    ]
+  },
+  "recommendations": {
+    "immediate_actions": [
+      "为 core components 添加单元测试",
+      "完善复杂组件的 API 文档",
+      "优化 Charts 组件的性能",
+      "建立组件性能基准测试"
+    ],
+    "short_term_goals": [
+      "将核心组件测试覆盖率提升至 80%",
+      "为 Excel 处理功能添加完整测试",
+      "建立页面组件的交互测试",
+      "优化代码分割和懒加载策略"
+    ],
+    "medium_term_goals": [
+      "引入 TypeScript 支持",
+      "实现组件库的独立打包",
+      "建立自动化测试流水线",
+      "完善监控和错误追踪"
+    ],
+    "long_term_goals": [
+      "升级到 Vue 3 和 Element Plus",
+      "实现微前端架构",
+      "建立组件市场和生态",
+      "支持多租户和国际化"
+    ]
+  },
+  "quality_metrics": {
+    "code_quality": "high",
+    "documentation": "good",
+    "test_coverage": "low",
+    "architecture": "good",
+    "maintainability": "good",
+    "performance": "medium"
+  },
+  "technology_stack": {
+    "frontend": "Vue 2.6.10",
+    "ui_library": "Element UI 2.13.2",
+    "state_management": "Vuex 3.1.0",
+    "routing": "Vue Router 3.0.2",
+    "http_client": "Axios 0.18.1",
+    "build_tool": "Vue CLI 4.4.4",
+    "test_framework": "Jest",
+    "mock_library": "Mock.js"
+  },
+  "next_scan_priority": [
+    "src/components/Charts/",
+    "src/views/excel/",
+    "src/components/Tinymce/",
+    "src/store/modules/permission.js",
+    "src/utils/request.js"
+  ],
+  "generated_documents": [
+    "/Users/jianghoumin/Sources/github/vue-element-admin/CLAUDE.md",
+    "/Users/jianghoumin/Sources/github/vue-element-admin/src/CLAUDE.md",
+    "/Users/jianghoumin/Sources/github/vue-element-admin/mock/CLAUDE.md",
+    "/Users/jianghoumin/Sources/github/vue-element-admin/tests/CLAUDE.md",
+    "/Users/jianghoumin/Sources/github/vue-element-admin/src/components/CLAUDE.md",
+    "/Users/jianghoumin/Sources/github/vue-element-admin/src/views/CLAUDE.md"
+  ]
+}
